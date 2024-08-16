@@ -1,0 +1,563 @@
+:root {
+    /** colours **/
+    --yellow: #FED766;
+    --lt-seafoam-green: #ecf9f6;
+    --seafoam-green: #43C6AC;
+    --md-blue: #191654;
+    --dk-blue: #0C0B2A;
+    --blue-grey: #6B717E;
+
+    /** typography **/
+    --headings: 'Monoton', cursive;
+    --body: 'Rubik', sans-serif;
+}
+
+body {
+    font-family: var(--body);
+}
+
+.sr-only {
+    position: absolute;
+    top: 0;
+    left: -9999999px;
+    width: 0.1rem;
+    height: 0.1rem;
+    visibility: hidden;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+nav ul li {
+    list-style-type: none;
+    color: var(--md-blue)
+}
+
+.logo {
+    width: 15rem;
+}
+
+.hamburger {
+    width: 3rem;
+    filter: invert(5%) sepia(86%) saturate(1688%) hue-rotate(228deg) brightness(99%) contrast(103%);
+}
+
+.flex-container p {
+    display: none;
+}
+
+header {
+    background-color: var(--lt-seafoam-green);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.toggle-btn {
+    color: var(--white);
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: lowercase;
+}
+
+ul {
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+}
+
+nav {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    background-color: var(--lt-seafoam-green);
+}
+
+.show-nav {
+    max-height: unset;
+    overflow: visible;
+}
+
+.main-menu li {
+    padding: 2rem 0 2rem 1rem;
+    border-bottom: 0.063rem solid var(--seafoam-green);
+    font-size: 1.5rem;
+}
+
+.main-menu li:hover {
+    color: var(--seafoam-green);
+}
+
+input[type=text] {
+    background: url('../img/search-icon.svg') left / cover no-repeat;
+    background-size: 1rem;
+    border-radius: 0.313rem;
+    margin: 1rem;
+    padding: 1rem 5rem 1rem 1rem;
+}
+
+/* MAIN CONTENT */
+
+.studio-banner {
+    background: linear-gradient(to bottom, #1e2a5e 0%, #3aa099 100%);
+    height: 70vh;
+    padding: 3rem 1rem 1rem 1rem;
+}
+
+.studio-banner h2 {
+    font-family: var(--headings);
+    color: white;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.studio-banner p {
+    color: white;
+    opacity: 80%;
+}
+
+.studio-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work-together {
+    border: 0.063rem solid var(--seafoam-green);
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: var(--seafoam-green);
+    color: var(--md-blue);
+    margin-top: 1rem;
+    border-radius: 0.625rem;
+}
+
+.view-work {
+    border: 0.188rem solid var(--seafoam-green);
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: var(--seafoam-green);
+    border-radius: 0.625rem;
+}
+
+
+.our-work h2 {
+    font-family: var(--headings);
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--md-blue);
+    padding: 4rem 1rem 0 1rem;
+}
+
+.line {
+    width: 20rem;
+    border: 0.063rem solid var(--seafoam-green);
+    margin-left: 1rem; 
+}
+
+.work-text {
+    padding: 1rem 0.5rem 4rem 0.5rem;
+}
+
+.cards-container-top,
+.cards-container-bottom {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+
+.cards {
+    flex: 0 0 23rem;
+}
+
+.cards img {
+    width: 100%;
+}
+
+.blue {
+    background-color: var(--md-blue);
+    padding: 1rem;
+    color: white;
+}
+
+.green {
+    background-color: var(--seafoam-green);
+    padding: 1rem;
+    color: var(--dk-blue)
+}
+
+.view-allwork,
+.view-services,
+.learn-more
+ {
+    border: 0.188rem solid var(--md-blue);
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--seafoam-green);
+    border-radius: 0.625rem;
+    margin: 2rem 0;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    color: var(--md-blue);
+}
+
+
+.view-allwork img,
+.what-we-do img,
+.learn-more img {
+    width: 1.5rem;
+}
+
+.what-we-do h2 {
+    font-family: var(--headings);
+    font-size: 2.7rem;
+    font-weight: 400;
+    color: var(--md-blue);
+    padding: 4rem 0.5rem 0 0.5rem;
+}
+
+.what-we-do p {
+    padding: 1rem;
+}
+
+.services-cards {
+    padding: 1rem;
+}
+
+.services-cards h3 {
+    color: var(--seafoam-green);
+    font-weight: 300;
+    font-size: 2rem;
+    margin: 1.5rem 0;
+}
+
+.who-we-are {
+    background-color: var(--seafoam-green);
+    padding: 1rem;
+}
+
+.who-we-are h2 {
+    font-family: var(--headings);
+    font-size: 2.3rem;
+    font-weight: 400;
+    color: var(--md-blue);
+    padding: 4rem 0.5rem 0 0.5rem;
+}
+
+.who-we-are p {
+    margin: 1rem 0.5rem;
+}
+
+.line-who {
+    width: 17rem;
+    border: 0.063rem solid white;
+    margin-left: 1rem; 
+    margin-bottom: 1rem;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: var(--md-blue);
+    color: white;
+}
+
+footer h2 {
+    font-family: var(--headings);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.email {
+    width: 100%;
+    padding: 0.8rem;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: var(--seafoam-green);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+.footer-signup,
+.first-address,
+.second-address,
+.email-address {
+    padding: 1rem;
+}
+
+.footer-signup p {
+    margin: 1.5rem 0;
+}
+
+.instagram,
+.mailchimp {
+    width: 3rem;
+}
+
+.facebook {
+    width: 1.9rem;
+}
+
+.disclaimer {
+    background-color: var(--dk-blue);
+    padding: 0.8rem 0 0.8rem 0.5rem;
+}
+
+.social-media {
+    display: flex;
+    gap: 0.5rem;
+    filter: invert(100%) sepia(94%) saturate(0%) hue-rotate(325deg) brightness(105%) contrast(101%);
+}
+
+.copyright {
+    display: flex;
+}
+
+.copyright p {
+    color: white;
+    line-height: 2;
+}
+
+
+@media screen and (min-width: 950px) {
+
+    .inner-container {
+        display: flex;
+        gap: 10rem;
+    }
+
+
+    .toggle-btn {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        overflow: visible;
+    }
+
+    nav ul li {
+        list-style-type: none;
+    }
+
+    .main-menu {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .main-menu li {
+        position: relative;
+        margin: 0.5rem;
+        padding: 0.5rem;
+        border-bottom: none;
+    }
+
+    input[type=text] {
+        margin: 1.3rem;
+        padding-left: 1rem;
+        padding-right: 2rem;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+    }
+
+    .logo {
+        width: 15rem;
+        margin-left: 3rem;
+    }
+
+    /* FOOTER */
+    .disclaimer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 35rem;
+        padding: 0.5rem 0;
+    }
+
+    .instagram,
+    .mailchimp {
+        width: 2rem;
+    }
+
+    .facebook {
+        width: 1.3rem;
+    }
+
+    .search-icon {
+        display: flex;
+        gap: 0.3rem;
+    }
+
+    .wide-flex {
+        display: flex;
+    }
+
+    .cards-container-top,
+    .cards-container-bottom {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: hidden;
+    }
+
+    .studio-banner h2 {
+        font-family: var(--headings);
+        color: white;
+        font-size: 4.5rem;
+        font-weight: 400;
+        width: 47rem;
+    }
+
+    .studio-buttons {
+        gap: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    .work-together {
+        width: 25%;
+    }
+    
+    .view-work {
+        width: 20%;
+    }
+
+    .work-text  {
+        width: 40%;
+    }
+
+    .view-allwork,
+    .view-services {
+        width: 25%;
+    }
+
+    .view-services {
+        width: 80%;
+    }
+
+    .view-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 5rem;
+    }
+
+    .what-we-do p {
+        width: 100%;
+        padding: 1rem 0 0 0;
+    }
+
+    .what-we-do h2 {
+        padding: 0;
+        font-size: 3rem;
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+    .container-what-we-do {
+        display: flex;
+        width: 50%;
+        margin-left: 5rem;
+    }
+
+    .services-cards-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .appdesign-text {
+        position: relative;
+        bottom: 20rem;
+        left: 20rem
+    } 
+
+    .container-appdesign p {
+        width: 50%;
+    } 
+
+    .who-we-are {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 2rem;
+        padding: 5rem 2rem;
+    }
+
+    .container-who-we-are {
+        width: 100%;
+    }
+
+
+    .office-image {
+        width: 50%;
+    }
+
+    .learn-more {
+        width: 40%;
+    }
+
+    .who-we-are h2 {
+        padding: 0;
+    }
+
+    .email {
+        width: 30%;
+    }
+    
+    input[type=submit] {
+        width: 20%;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: center;
+        gap: 20rem;
+    }
+
+    .footer-address {
+        margin: 3rem 0 0 2rem;
+    }
+
+    .footer-signup {
+        margin: 5rem 0 0 2rem;
+    }
+
+    .footer-signup p {
+        width: 60%;
+    }
+
+    .main-menu li {
+        font-size: 1rem;
+    }
+
+}
